@@ -1,0 +1,71 @@
+p-spinner {
+  flex-grow: 1;
+  ::ng-deep .ui-spinner {
+    width: 100%;
+    &-button {
+      left: 0 !important;
+      right: auto !important;
+
+      &.ui-spinner-up {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      &.ui-spinner-down {
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+      }
+    }
+
+    &-input {
+      padding-right: 0.5em;
+      border-top-right-radius: 3px !important;
+      border-bottom-right-radius: 3px !important;
+      border-right: 1px solid #a6a6a6 !important;
+      width: 100%;
+      &:not(:disabled):hover {
+        border-color: #212121;
+      }
+      &:focus {
+        border-color: #007ad9;
+      }
+    }
+  }
+  &.hasAfter {
+    ::ng-deep .ui-spinner-button {
+      &.ui-spinner-up {
+        border-top-left-radius: 0;
+      }
+
+      &.ui-spinner-down {
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+  &.hasBefore {
+    ::ng-deep .ui-spinner-input {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-right: 0 none;
+    }
+  }
+}
+
+.after ::ng-deep after,
+.before ::ng-deep before {
+  display: flex;
+}
+
+.ui-inputgroup {
+  flex-grow: 1;
+  .ui-inputgroup-addon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  span.ui-widget,
+  span.ui-widget input {
+    height: 100%;
+  }
+}

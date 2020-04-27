@@ -1,0 +1,14 @@
+p-messages {
+  ::ng-deep .ui-messages {
+    ul {
+      display: block;
+      > li {
+        display: block;
+      }
+    }
+    &-close {
+      left: 0.5em;
+      right: auto;
+    }
+  }
+}

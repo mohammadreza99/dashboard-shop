@@ -1,0 +1,20 @@
+
+<div dir="rtl" class="container-fluid ui-rtl px-0 h-100 main-wrapper">
+  <main class="row mx-0 h-100">
+    <navbar-menu (hambergurClick)="onHambergurClick()"></navbar-menu>
+    <p-sidebar
+      #sidebar
+      [modal]="isModalSidebar"
+      [blockScroll]="true"
+      [showCloseIcon]="false"
+      [(visible)]="showSidebar"
+      position="right"
+    >
+      <sidenav-menu></sidenav-menu>
+    </p-sidebar>
+    <div class="col px-0 mr-250" #mainContent>
+      <p-breadcrumb [model]="breadcrumbItems"></p-breadcrumb>
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>

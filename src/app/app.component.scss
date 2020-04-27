@@ -1,0 +1,44 @@
+@import "../assets/styles/mixins.scss";
+
+.col {
+  margin-top: $navbar-height;
+  margin-right: 0;
+  transition: margin-right 0.3s;
+  &.mr-250 {
+    margin-right: $sidenav-width;
+  }
+  @media (max-width: 767px) {
+    margin-top: $navbar-responsive-height;
+  }
+}
+
+p-breadcrumb {
+  ::ng-deep ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+  ::ng-deep .pi-chevron-right {
+    @include fa-icon("\f053");
+  }
+  ::ng-deep .ui-breadcrumb {
+    border: 0;
+    background-color: $light-blue;
+  }
+}
+
+p-sidebar {
+  ::ng-deep .ui-sidebar-right {
+    padding: 0;
+    direction: ltr;
+    width: $sidenav-width;
+    margin-top: $navbar-height;
+  }
+
+  &.responsive-mode {
+    ::ng-deep .ui-sidebar-right {
+      margin-top: $navbar-responsive-height;
+    }
+  }
+}

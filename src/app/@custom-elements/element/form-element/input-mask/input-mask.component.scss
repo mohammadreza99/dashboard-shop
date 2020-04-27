@@ -1,0 +1,24 @@
+p-inputMask {
+  flex-grow: 1;
+  ::ng-deep .ui-inputtext {
+    width: 100%;
+  }
+}
+
+.after ::ng-deep after,
+.before ::ng-deep before {
+  display: flex;
+}
+
+.ui-inputgroup {
+  flex-grow: 1;
+  .ui-inputgroup-addon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  span.ui-widget,
+  span.ui-widget input {
+    height: 100%;
+  }
+}

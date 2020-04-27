@@ -1,0 +1,47 @@
+<form class="form-row" [formGroup]="form">
+  <div class="d-flex flex-column col-lg-7">
+    <input-text formControlName="nationalCode" labelWidth="80" label="کد محصول">
+    </input-text>
+
+    <input-text formControlName="name" labelWidth="80" label="نام محصول">
+    </input-text>
+
+    <input-radio
+      formControlName="stock"
+      labelWidth="80"
+      label="وضعیت"
+      [linear]="true"
+      [items]="stockList"
+      field="label"
+    ></input-radio>
+
+    <input-number
+      [disabled]="form.get('stock').value != 'موجود - محدود'"
+      formControlName="count"
+      labelWidth="80"
+      label="تعداد"
+    ></input-number>
+
+    <div class="d-flex align-items-center">
+      <input-checkbox-single
+        formControlName="isActive"
+        label="انتشار در آینده"
+        class="ml-5"
+      ></input-checkbox-single>
+      <input-date-picker
+        formControlName="releaseDate"
+        [disabled]="form.get('isActive').value == false"
+        class="flex-grow-1"
+        labelWidth="80"
+        label="تاریخ انتشار"
+      >
+      </input-date-picker>
+    </div>
+  </div>
+  <p-editor
+    formControlName="description"
+    dir="ltr"
+    class="col-12 ui-ltr"
+    [style]="{ height: '320px' }"
+  ></p-editor>
+</form>

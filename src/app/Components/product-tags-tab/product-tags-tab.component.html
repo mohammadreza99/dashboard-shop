@@ -1,0 +1,28 @@
+<form class="form-row">
+  <div class="d-flex flex-column col-lg-7">
+    <input-autocomplete
+      placeholder="جستجوی تگ..."
+      (onSelect)="onTagSelect($event)"
+      [multiple]="false"
+      [items]="tags"
+    >
+      <after>
+        <btn
+          label="افزودن تگ"
+          icon="pi pi-plus"
+          color="secondary"
+          (click)="addNewTag()"
+        ></btn>
+      </after>
+    </input-autocomplete>
+    <empty class="mt-3" *ngIf="selectedTags.length == 0"></empty>
+    <tag
+      *ngFor="let tag of selectedTags; let i = index"
+      [ngClass]="{
+        'mb-1': selectedTags.length != 0 && i != selectedTags.length - 1
+      }"
+      [text]="tag"
+      (onDelete)="onDeleteTag(i)"
+    ></tag>
+  </div>
+</form>

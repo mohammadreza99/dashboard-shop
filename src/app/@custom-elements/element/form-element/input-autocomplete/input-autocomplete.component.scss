@@ -1,0 +1,117 @@
+p-autocomplete {
+  flex-grow: 1;
+  ::ng-deep .ui-autocomplete {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    .ui-autocomplete-input {
+      width: 100%;
+    }
+    .ui-autocomplete-multiple-container {
+      width: 100%;
+      direction: rtl;
+    }
+    .ui-autocomplete-dropdown {
+      border-top-right-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+
+    .ui-autocomplete-list-item {
+      text-align: right !important;
+    }
+  }
+
+  &.hasBefore {
+    ::ng-deep .ui-autocomplete-input {
+      border-bottom-right-radius: 0 !important;
+      border-top-right-radius: 0 !important;
+      border-right: 0 none !important;
+    }
+  }
+
+  &.hasAfter {
+    ::ng-deep .ui-autocomplete-input {
+      border-bottom-left-radius: 0 !important;
+      border-top-left-radius: 0 !important;
+      border-left: 0 none !important;
+    }
+    ::ng-deep .ui-autocomplete-dropdown {
+      border-top-left-radius: 0 !important;
+      border-bottom-left-radius: 0 !important;
+    }
+  }
+
+  ::ng-deep .ui-autocomplete-loader {
+    left: 0.25em;
+    right: auto;
+  }
+}
+
+.after ::ng-deep after,
+.before ::ng-deep before {
+  display: flex;
+}
+
+.ui-inputgroup {
+  flex-grow: 1;
+  ::ng-deep .ui-inputtext:not(:last-child) {
+    border-right: 1px solid #a6a6a6;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+  .ui-inputgroup-addon {
+    display: flex !important;
+    align-items: stretch !important;
+    justify-content: center !important;
+    ::ng-deep after {
+      p-button {
+        height: 100%;
+        button {
+          height: 100%;
+        }
+        .ui-button {
+          border: 0;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          &-text-icon-right .ui-button-text {
+            padding: 0.25em 2.1em 0.25em 1em;
+          }
+          &-text-icon-left .ui-button-text {
+            padding: 0.25em 1em 0.25em 2.1em;
+          }
+          &.ui-button-icon-only .ui-button-text {
+            padding: 0.25em;
+          }
+        }
+      }
+    }
+    ::ng-deep before {
+      p-button {
+        height: 100%;
+        button {
+          height: 100%;
+        }
+        .ui-button {
+          border: 0;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          &-text-icon-right .ui-button-text {
+            padding: 0.25em 2.1em 0.25em 1em;
+          }
+          &-text-icon-left .ui-button-text {
+            padding: 0.25em 1em 0.25em 2.1em;
+          }
+          &.ui-button-icon-only .ui-button-text {
+            padding: 0.25em;
+          }
+        }
+      }
+    }
+  }
+  span.ui-widget,
+  span.ui-widget input {
+    height: 100%;
+  }
+}

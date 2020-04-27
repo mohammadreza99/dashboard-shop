@@ -1,0 +1,61 @@
+@import "../../../assets/styles/mixins.scss";
+$sidenav-width: 250px;
+
+nav {
+  z-index: 5000;
+  height: $navbar-height;
+
+  .navbar-logo {
+    height: $navbar-height - 15;
+    width: calc(#{$sidenav-width} - 1em);
+  }
+
+  .navbar-inner-wrapper {
+    display: flex;
+    width: calc(100% - #{$sidenav-width});
+    .navbar-avatar {
+      position: relative;
+      cursor: pointer;
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: -1rem;
+        height: 70%;
+        width: 1px;
+        background: #ddd;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .avatar {
+        img {
+          width: 35px;
+        }
+      }
+    }
+
+    input-text {
+      width: 100%;
+      & ::ng-deep div {
+        width: 100%;
+        & input {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  nav {
+    height: $navbar-responsive-height;
+  }
+  .navbar-inner-wrapper,
+  .navbar-logo {
+    width: 100% !important;
+  }
+  .navbar-logo {
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  align-items: center;
+}
+
+p-radioButton {
+  ::ng-deep .ui-radiobutton-label {
+    margin: 0 0.5em 0 0;
+  }
+  &.mb-2 {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+}

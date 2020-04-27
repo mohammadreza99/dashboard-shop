@@ -1,0 +1,44 @@
+p-chips {
+  flex-grow: 1;
+  ::ng-deep .ui-chips {
+    display: flex;
+
+    .ui-inputtext {
+      flex-grow: 1;
+      direction: rtl;
+    }
+  }
+
+  &.hasBefore {
+    ::ng-deep .ui-chips .ui-inputtext {
+      border-bottom-right-radius: 0 !important;
+      border-top-right-radius: 0 !important;
+      border-right: 0 none !important;
+    }
+  }
+  &.hasAfter {
+    ::ng-deep .ui-chips .ui-inputtext {
+      border-bottom-left-radius: 0 !important;
+      border-top-left-radius: 0 !important;
+      border-left: 0 none !important;
+    }
+  }
+}
+
+.after ::ng-deep after,
+.before ::ng-deep before {
+  display: flex;
+}
+
+.ui-inputgroup {
+  flex-grow: 1;
+  .ui-inputgroup-addon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  span.ui-widget,
+  span.ui-widget input {
+    height: 100%;
+  }
+}

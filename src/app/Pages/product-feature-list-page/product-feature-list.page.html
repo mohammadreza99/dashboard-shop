@@ -1,0 +1,26 @@
+<div class="container-fluid" *ngIf="features && features.length > 0">
+  <div class="row">
+    <div class="col-12">
+      <toolbar class="page-header">
+        <left
+          ><btn
+            label="افزودن"
+            icon="fa fa-plus"
+            color="success"
+            (click)="onAddFeatureClick()"
+          ></btn
+        ></left>
+        <right>
+          <h1>خصوصیات</h1>
+        </right>
+      </toolbar>
+      <c-table
+        [items]="features"
+        [columns]="columns"
+        [actions]="actions"
+        (actionClick)="onActionClick($event)"
+        (listItemClick)="onFeatureValueClick($event)"
+      ></c-table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="container-fluid pb-5">
+  <div class="row">
+    <div class="col-12">
+      <toolbar class="page-header">
+        <right>
+          <h1>{{ pageTitle }}</h1>
+        </right>
+      </toolbar>
+    </div>
+    <div class="col-lg-7 mb-4">
+      <input-dropdown
+        label="نام دسته"
+        labelWidth="150"
+        [items]="[{label:'ss',value:'ss'}]"
+        [(ngModel)]="selectedCategory"
+      ></input-dropdown>
+    </div>
+    <div class="col-12">
+      <c-table
+      #cTable
+      [items]="products"
+      [columns]="columns"
+      [actions]="actions"
+      [showDeleteAction]="false"
+      (actionClick)="onActionClick($event)"
+    >
+    </c-table>
+    </div>
+  </div>
+</div>

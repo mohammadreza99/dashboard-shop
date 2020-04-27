@@ -1,0 +1,19 @@
+<input-container
+  [config]="containerConfig"
+>
+<date-time-picker
+  [disabled]="disabled"
+  [readonly]="readonly"
+  [clearable]="clearable"
+  [placeholder]="placeholder"
+  [style]="style"
+  [date]="value"
+  [inline]="false"
+  [datePickerMode]="datePickerMode"
+  [beforeAfter]="beforeAfterConfig"
+  (onChange)="_onChange($event)"
+  (onBlur)="__onBlur()"
+  (onFocus)="_onFocus()"
+>
+</date-time-picker>
+</input-container>

@@ -1,0 +1,89 @@
+@import "./assets/fonts/fonts.scss";
+@import "./assets/styles/bootstrap.scss";
+@import "./assets/styles/theme.scss";
+
+html,
+body {
+  background: $light-blue;
+  height: 100%;
+  *,
+  .ui-widget {
+    font-family: IRANSans;
+    font-weight: 400;
+  }
+}
+
+.ui-menuitem-icon {
+  margin-right: 0 !important;
+  margin-left: 0.25rem;
+}
+
+.ui-float-label input:focus ~ label,
+.ui-float-label input.ui-state-filled ~ label,
+.ui-float-label .ui-inputwrapper-focus ~ label,
+.ui-float-label .ui-inputwrapper-filled ~ label {
+  top: -0.75em !important;
+  font-size: 12px !important;
+}
+
+.ui-float-label {
+  > label {
+    right: 0.25em;
+    left: auto;
+    &.focused {
+      top: -0.75em;
+      font-size: 12px;
+    }
+    &:not(.focused) {
+      top: 50%;
+      font-size: 14px;
+    }
+  }
+}
+
+.ui-float-label > textarea {
+  ~ label {
+    &:not(.focused) {
+      top: 0.75em !important;
+      font-size: 14px;
+    }
+  }
+}
+
+input,
+textarea,
+[role="dialog"] {
+  direction: rtl;
+}
+
+
+p-paginator {
+  direction: ltr;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: none;
+}
+
+p-message {
+  @media (max-width: 575px) {
+    margin-right: 0 !important;
+  }
+}
+
+.ui-widget-overlay.ui-sidebar-mask {
+  @media (min-width: 768px) {
+    display: none !important;
+  }
+}
+
+.ui-menu {
+  z-index: 6000 !important;
+}
+
+.ui-table .ui-table-tbody > tr.ui-state-highlight .array-item {
+  color: #333333;
+}

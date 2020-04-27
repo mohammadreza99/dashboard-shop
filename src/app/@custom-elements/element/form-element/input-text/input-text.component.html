@@ -1,0 +1,18 @@
+<input-container [config]="containerConfig">
+  <input
+    pInputText
+    class="text-right w-100"
+    [ngStyle]="style"
+    [id]="id"
+    [disabled]="disabled"
+    [readonly]="readonly"
+    [placeholder]="placeholder"
+    [name]="name"
+    [maxlength]="maxlength"
+    [beforeAfter]="beforeAfterConfig"
+    [(ngModel)]="value"
+    (input)="_onInput()"
+    (blur)="_onBlur()"
+    (focus)="_onFocus()"
+  />
+</input-container>

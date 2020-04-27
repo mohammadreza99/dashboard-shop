@@ -1,0 +1,16 @@
+<c-table
+[items]="selectedFeatures"
+[columns]="featuresColumns"
+[actions]="featuresActions"
+(actionClick)="featuresActionClick($event)"
+>
+<caption>
+  <btn
+    (click)="onAddNewFeature()"
+    label="افزودن خصیصه جدید"
+    icon="fas fa-plus"
+    class="mr-2"
+    color="secondary"
+  ></btn>
+</caption>
+</c-table>

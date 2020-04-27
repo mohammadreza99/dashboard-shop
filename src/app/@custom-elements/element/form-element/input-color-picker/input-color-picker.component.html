@@ -1,0 +1,19 @@
+<input-container [config]="containerConfig">
+  <input-text
+    [label]="label"
+    [labelWidth]="labelWidth"
+    [placeholder]="placeholder"
+    [readonly]="readonly"
+    [(ngModel)]="value"
+  >
+  </input-text>
+  <p-colorPicker
+    [style]="style"
+    [inputId]="id"
+    [disabled]="disabled"
+    [inline]="false"
+    [format]="format"
+    [(ngModel)]="value"
+    (onChange)="_onChange($event)"
+  ></p-colorPicker>
+</input-container>

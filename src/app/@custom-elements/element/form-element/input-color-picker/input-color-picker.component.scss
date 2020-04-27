@@ -1,0 +1,17 @@
+input-text {
+  ::ng-deep input {
+    &.ui-colorpicker-preview {
+      border-top-left-radius: 0 !important;
+      border-bottom-left-radius: 0 !important;
+    }
+    
+    &:not(.ui-colorpicker-preview) {
+      direction: ltr;
+      width: 80px !important;
+    }
+  }
+
+  ::ng-deep .ui-inputgroup-addon {
+    border-width: 0;
+  }
+}
