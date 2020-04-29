@@ -1,0 +1,11 @@
+.col-lg-7 > * {
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+  div.d-flex {
+    > span {
+      width: 150px;
+    }
+  }
+  

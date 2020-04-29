@@ -1,11 +1,16 @@
-import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { BrowserModule } from '@angular/platform-browser';
+import {
+  NgModule,
+  NO_ERRORS_SCHEMA,
+  CUSTOM_ELEMENTS_SCHEMA,
+} from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AppComponent } from "./app.component";
-import { PageModule } from "./Pages/page.module";
-import { ComponentModule } from "./Components/component.module";
-import { CustomElementsModule } from './@custom-elements/custom-elements.module';
+import { AppComponent } from './app.component';
+import { PageModule } from './page/page.module';
+import { DataService } from './service/data.service';
+import { ComponentModule } from './component/component.module';
+import { PrimeNgModule } from './@prime/prime-module/prime-ng.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -13,11 +18,12 @@ import { CustomElementsModule } from './@custom-elements/custom-elements.module'
     BrowserModule,
     BrowserAnimationsModule,
     PageModule,
+    PageModule,
     ComponentModule,
-    CustomElementsModule,
+    PrimeNgModule
   ],
-  schemas: [NO_ERRORS_SCHEMA],
-  providers: [],
-  bootstrap: [AppComponent]
+  schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA],
+  providers: [DataService],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
