@@ -28,12 +28,12 @@ export class AppComponent {
   onResize(event) {
     if (event.target.innerWidth < 768) {
       this.isModalSidebar = true;
-      this.mainContent.nativeElement.classList.remove('mr-250');
+      this.mainContent.nativeElement.classList.remove('mr-278');
       this.sidebar.nativeElement.classList.add('responsive-mode');
     } else {
       this.isModalSidebar = false;
       if (this.showSidebar)
-        this.mainContent.nativeElement.classList.add('mr-250');
+        this.mainContent.nativeElement.classList.add('mr-278');
       this.sidebar.nativeElement.classList.remove('responsive-mode');
     }
     this.cd.detectChanges();
@@ -44,6 +44,6 @@ export class AppComponent {
   onHambergurClick() {
     this.showSidebar = !this.showSidebar;
     if (!this.isModalSidebar)
-      this.mainContent.nativeElement.classList.toggle('mr-250');
+      this.mainContent.nativeElement.classList.toggle('mr-278');
   }
 }
