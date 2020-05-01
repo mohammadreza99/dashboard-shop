@@ -3,6 +3,7 @@ $sidenav-width: 278px;
 
 nav {
   z-index: 5000;
+  height: 62px;
   .navbar-logo {
     width: auto;
     height: $navbar-height - 15;
@@ -45,6 +46,6 @@ nav {
   }
 }
 
-p-menu ::ng-deep .ui-menu{
+p-menu ::ng-deep .ui-menu {
   z-index: 5001 !important;
 }
