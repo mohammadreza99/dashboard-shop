@@ -105,6 +105,7 @@ export class BeforeAfterDirective implements OnInit {
             this.renderer.addClass(ICON, `fa-${_rotation}`);
             this.renderer.setStyle(ICON, 'line-height', 1.25);
             this.renderer.addClass(ICON_SPAN, 'ui-inputgroup-addon');
+            this.renderer.addClass(ICON_SPAN, 'p-1');
             this.renderer.setStyle(ICON_SPAN, 'z-index', 1000);
             if (_spin) this.renderer.addClass(ICON, 'fa-spin');
             this.renderer.appendChild(ICON_SPAN, ICON);
@@ -114,6 +115,7 @@ export class BeforeAfterDirective implements OnInit {
             const TEXT = this.renderer.createText(object.text || null);
             const TEXT_SPAN = this.renderer.createElement('span');
             this.renderer.addClass(TEXT_SPAN, 'ui-inputgroup-addon');
+            this.renderer.addClass(TEXT_SPAN, 'p-1');
             this.renderer.setStyle(TEXT_SPAN, 'z-index', 1000);
             this.renderer.setStyle(TEXT_SPAN, 'line-height', 1.25);
             this.renderer.setStyle(TEXT_SPAN, 'font-size', '14px');

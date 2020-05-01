@@ -27,19 +27,19 @@
     ></prm-input-number>
 
     <div class="d-flex align-items-center">
-      <prm-input-checkbox-single
-        formControlName="isActive"
-        label="انتشار در آینده"
-        class="ml-5"
-      ></prm-input-checkbox-single>
-      <prm-input-date-picker
+      <prm-input-date-time-picker
         formControlName="releaseDate"
         [disabled]="form.get('isActive').value == false"
         class="flex-grow-1"
         labelWidth="80"
         label="تاریخ انتشار"
       >
-      </prm-input-date-picker>
+      </prm-input-date-time-picker>
+      <prm-input-checkbox-single
+        formControlName="isActive"
+        label="انتشار در آینده"
+        class="ml-5"
+      ></prm-input-checkbox-single>
     </div>
   </div>
   <p-editor

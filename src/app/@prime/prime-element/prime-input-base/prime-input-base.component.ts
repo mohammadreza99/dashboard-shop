@@ -92,6 +92,7 @@ export class PrimeInputBaseComponent
         }
         this.validateAllFormFields(this.controlContainer.form);
       });
+      
     }
 
     this.containerConfig = {
