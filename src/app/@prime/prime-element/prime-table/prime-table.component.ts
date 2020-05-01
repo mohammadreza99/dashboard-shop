@@ -45,7 +45,7 @@ export class PrimeTableComponent implements OnInit {
   @Input() showRowIndex = true;
   @Input() sortable = true;
   @Input() selectionMode: PrimeTreeSelectionMode = null;
-  @Input() layout: PrimeDirection = 'ltr';
+  @Input() layout: PrimeDirection = 'rtl';
   @Input() actions: PrimeTableAction[] = [];
   @Input() showDeleteAction: boolean = false;
   @Output() rowSelected = new EventEmitter();

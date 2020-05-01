@@ -29,17 +29,15 @@ export class AppComponent {
     if (event.target.innerWidth < 768) {
       this.isModalSidebar = true;
       this.mainContent.nativeElement.classList.remove('mr-278');
-      this.sidebar.nativeElement.classList.add('responsive-mode');
     } else {
       this.isModalSidebar = false;
       if (this.showSidebar)
         this.mainContent.nativeElement.classList.add('mr-278');
-      this.sidebar.nativeElement.classList.remove('responsive-mode');
+      var sidebarMask = document.querySelector('.ui-sidebar-mask');
+      if (sidebarMask) sidebarMask.setAttribute('style', 'display:none');
     }
     this.cd.detectChanges();
   }
-
-  ngOnInit(): void {}
 
   onHambergurClick() {
     this.showSidebar = !this.showSidebar;

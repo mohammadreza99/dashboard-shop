@@ -27,14 +27,8 @@ p-sidebar {
     padding: 0;
     width: $sidenav-width;
     margin-top: $navbar-responsive-height;
-    // z-index: 10 !important;
     @media (min-width: 768px) {
       margin-top: $navbar-height;
     }
   }
-  // &.responsive-mode {
-  //   ::ng-deep .ui-sidebar-right {
-  //     margin-top: $navbar-responsive-height;
-  //   }
-  // }
 }

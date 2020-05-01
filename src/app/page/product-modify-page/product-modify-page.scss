@@ -1,7 +1,4 @@
-
-div.d-flex {
-    > span {
-      width: 120px;
-    }
-  }
-  
+p-tabView ::ng-deep .ui-tabview-nav{
+  display: flex;
+  flex-direction: row-reverse;
+}
