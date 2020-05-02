@@ -1,4 +1,10 @@
-import { Component, OnInit, forwardRef, AfterViewInit, Input } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  forwardRef,
+  AfterViewInit,
+  Input,
+} from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 
 import { PrimeInputBaseComponent } from '../prime-input-base/prime-input-base.component';
@@ -17,9 +23,7 @@ import { PrimeInputBaseComponent } from '../prime-input-base/prime-input-base.co
 })
 export class PrimeInputTextComponent extends PrimeInputBaseComponent
   implements OnInit, AfterViewInit {
-
   // constructor() { super() }
-
 
   ngOnInit() {
     super.ngOnInit();
@@ -27,6 +31,7 @@ export class PrimeInputTextComponent extends PrimeInputBaseComponent
 
   ngAfterViewInit() {
     super.ngAfterViewInit();
+    console.log(this.layout);
   }
 
   _onInput() {
