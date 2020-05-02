@@ -1,24 +1,18 @@
 @import "../assets/styles/mixins.scss";
 
 .col {
-  margin-top: $navbar-height;
-  margin-right: 0;
+  margin-top: $navbar-responsive-height;
   transition: margin-right 0.3s;
-  &.mr-250 {
+  &.mr-278 {
     margin-right: $sidenav-width;
   }
-  @media (max-width: 767px) {
-    margin-top: $navbar-responsive-height;
+  @media (min-width: 768px) {
+    margin-top: $navbar-height;
   }
 }
 
 p-breadcrumb {
-  ::ng-deep ul {
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-  }
+  text-align: right;
   ::ng-deep .pi-chevron-right {
     @include fa-icon("\f053");
   }
@@ -31,14 +25,10 @@ p-breadcrumb {
 p-sidebar {
   ::ng-deep .ui-sidebar-right {
     padding: 0;
-    direction: ltr;
     width: $sidenav-width;
-    margin-top: $navbar-height;
-  }
-
-  &.responsive-mode {
-    ::ng-deep .ui-sidebar-right {
-      margin-top: $navbar-responsive-height;
+    margin-top: $navbar-responsive-height;
+    @media (min-width: 768px) {
+      margin-top: $navbar-height;
     }
   }
 }

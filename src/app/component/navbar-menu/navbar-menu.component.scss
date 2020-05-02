@@ -1,18 +1,18 @@
 @import "../../../assets/styles/mixins.scss";
-$sidenav-width: 250px;
+$sidenav-width: 278px;
 
 nav {
   z-index: 5000;
-  height: $navbar-height;
-
+  height: 62px;
   .navbar-logo {
+    width: auto;
     height: $navbar-height - 15;
-    width: calc(#{$sidenav-width} - 1em);
+    flex-grow: 1;
   }
 
   .navbar-inner-wrapper {
     display: flex;
-    width: calc(100% - #{$sidenav-width});
+    width: auto;
     .navbar-avatar {
       position: relative;
       cursor: pointer;
@@ -34,28 +34,18 @@ nav {
         }
       }
     }
+  }
 
-    input-text {
-      width: 100%;
-      & ::ng-deep div {
-        width: 100%;
-        & input {
-          width: 100%;
-        }
-      }
+  @media (min-width: 768px) {
+    .navbar-logo {
+      width: calc(#{$sidenav-width} - 1em);
+    }
+    .navbar-inner-wrapper {
+      width: calc(100% - calc(#{$sidenav-width} - 1rem));
     }
   }
 }
 
-@media (max-width: 767px) {
-  nav {
-    height: $navbar-responsive-height;
-  }
-  .navbar-inner-wrapper,
-  .navbar-logo {
-    width: 100% !important;
-  }
-  .navbar-logo {
-    justify-content: space-between;
-  }
+p-menu ::ng-deep .ui-menu {
+  z-index: 5001 !important;
 }

@@ -38,6 +38,7 @@ import { MessageModule } from 'primeng/message';
 import { ColorPickerModule } from 'primeng/colorpicker';
 import { PasswordModule } from 'primeng/password';
 import { TreeModule } from 'primeng/tree';
+import { EditorModule } from 'primeng/editor';
 
 export const MODULES = [
   ButtonModule,
@@ -80,4 +81,5 @@ export const MODULES = [
   MessageModule,
   ColorPickerModule,
   PasswordModule,
+  EditorModule,
 ];
